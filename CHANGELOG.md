@@ -5,6 +5,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### `jsonschema-module-jackson`
+#### Fixed
+- support `@JacksonAnnotationsInside` annotated combo annotations also when looking for `@JsonPropertyDescription`  
+
+## [4.38.0] - 2025-03-24
+### `jsonschema-generator`
+#### Changed
+- avoid duplicate entries in `required` array when performing final clean-ups
+
+### `jsonschema-module-swagger2`
+#### Fixed
+- respect `Option.NULLABLE_FIELDS_BY_DEFAULT`/`Option.NULLABLE_METHOD_RETURN_VALUES_BY_DEFAULT` for fields/methods without `@Schema` annotation
+
+## [4.37.0] - 2024-11-11
 ### `jsonschema-generator`
 #### Added
 - new `Option.NULLABLE_ALWAYS_AS_ANYOF` that avoids the `"null"` type being included with other type values, e.g. `"type": ["object", "null"]`
@@ -864,7 +878,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Indicate a number's "exclusiveMaximum" according to `@DecimalMax` or `@Negative`
 
 
-[Unreleased]: https://github.com/victools/jsonschema-generator/compare/v4.35.0...HEAD
+[Unreleased]: https://github.com/victools/jsonschema-generator/compare/v4.38.0...HEAD
+[4.38.0]: https://github.com/victools/jsonschema-generator/compare/v4.37.0...v4.38.0
+[4.37.0]: https://github.com/victools/jsonschema-generator/compare/v4.36.0...v4.37.0
 [4.36.0]: https://github.com/victools/jsonschema-generator/compare/v4.35.0...v4.36.0
 [4.35.0]: https://github.com/victools/jsonschema-generator/compare/v4.34.0...v4.35.0
 [4.34.0]: https://github.com/victools/jsonschema-generator/compare/v4.33.1...v4.34.0
